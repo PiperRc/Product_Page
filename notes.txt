@@ -1,0 +1,75 @@
+DESIGN
+<body>
+
+ <nav class='.navbar'>
+ hamburger:make it animated
+
+ </nav>
+
+<main>
+<div class='product-image'>
+
+</div>
+
+<section class='product-info'>
+
+       <section class="product-description">
+       </section>
+
+       <section class="product-cart">
+        price
+        number of products
+        add to cart
+         <section>
+
+</section>
+
+
+
+
+
+
+
+</main>
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+____________________________________
+<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+</div>
+
+Collections
+Men
+Women
+About
+Contact
+
+Sneaker Company
+
+Fall Limited Edition Sneakers
+
+These low-profile sneakers are your perfect casual wear companion. Featuring a
+durable rubber outer sole, they’ll withstand everything the weather can offer.
+
+$125.00
+50%
+$250.00
+
+0
+Add to cart
+
+_____
