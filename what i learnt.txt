@@ -1,1 +1,4 @@
-1) placing images in a div make them easier to work with,then setting the image width to 100%;
+1) placing images in a div make them easier to work with,then setting the 
+image width to 100%;
+
+2)images and position

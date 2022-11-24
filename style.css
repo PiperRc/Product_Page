@@ -12,9 +12,9 @@ html {
 
 /* navbar */
 .navbar {
-   background-color: lightcyan;
+   /* background-color: lightcyan; */
    display: grid;
-   grid-template-rows: 5rem;
+   grid-template-rows: 7rem;
    grid-template-columns: 1fr 1fr 1fr 1fr;
    align-items: center;
    justify-items: center;
@@ -29,8 +29,10 @@ html {
 }
 
 .logo {
-   width: 12rem;
+   width: 14rem;
 }
+
+
 
 .cart-logo {
    width: 2rem;
@@ -46,6 +48,39 @@ html {
 }
 
 /* product-image*/
-.product-image img{
-   width:100%;
+.product-image {
+   /* border:2px solid darkorchid; */
+   position: relative;
 }
+
+.product-image img:nth-child(1) {
+   width: 100%;
+}
+
+.previous-icon,
+.next-icon {
+   width: 3rem;
+    position: absolute;
+    /* border: 2px solid darkred; */
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    padding: 0.8rem;
+    background-color: white;
+}
+
+.previous-icon img,
+.next-icon img{
+   
+}
+
+.previous-icon{
+   left:2rem;
+   
+}
+
+.next-icon{
+   right:2rem;
+}
+
+/*  */

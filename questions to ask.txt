@@ -1,1 +1,5 @@
 1)why putting images in a div make it easier ro work with
+
+2)images and positin
+
+3)
