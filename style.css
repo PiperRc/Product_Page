@@ -8,7 +8,16 @@ html {
    font-size: 62.5%;
 }
 
-:root {}
+:root {
+   --main-color: hsl(26, 100%, 55%);
+   --pale-orange: hsl(25, 100%, 94%);
+   --dk-blue: hsl(220, 13%, 13%);
+   --dg-blue: hsl(219, 9%, 45%);
+   --gk-blue: hsl(220, 14%, 75%);
+   --lk-blue: hsl(223, 64%, 98%);
+   --text-white: hsl(0, 9%, 100%);
+   --black-color: hsl(0, 0%, 0%);
+}
 
 /* navbar */
 .navbar {
@@ -59,28 +68,78 @@ html {
 
 .previous-icon,
 .next-icon {
-   width: 3rem;
-    position: absolute;
-    /* border: 2px solid darkred; */
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    padding: 0.8rem;
-    background-color: white;
+   width: 4rem;
+   position: absolute;
+   /* border: 2px solid darkred; */
+   top: 50%;
+   transform: translateY(-50%);
+   border-radius: 50%;
+   padding: 1.3rem;
+   background-color: white;
 }
 
 .previous-icon img,
-.next-icon img{
-   
+.next-icon img {}
+
+.previous-icon {
+   left: 1rem;
+
 }
 
-.previous-icon{
-   left:2rem;
-   
-}
-
-.next-icon{
-   right:2rem;
+.next-icon {
+   right: 1rem;
 }
 
 /*  */
+.product-description,
+.product-cart {
+   padding: 1.5rem;
+}
+
+.product-description h1 {
+   font-size: 1.3rem;
+   color: var(--main-color);
+   letter-spacing: .1rem;
+   font-weight: bolder;
+}
+
+.product-description h2 {
+   font-size: 2.8rem;
+   padding-top: 1rem;
+}
+
+.product-description p {
+
+   font-size: 1.55rem;
+   padding-top: 2rem;
+   color: var(--dg-blue);
+   line-height: 1.4;
+}
+
+/* product amount */
+.product-amount {
+   background-color: var(--lk-blue);
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 4rem;
+   justify-items: center;
+   align-items: center;
+   padding-left: 2rem;
+   padding-right: 2rem;
+}
+
+.product-amount img {
+   width: 1.5rem;
+}
+
+.product-amount span {
+   font-size: 2rem;
+}
+
+.plus-sign {
+   justify-self: right;
+}
+
+.minus-sign {
+   justify-self: left;
+}
