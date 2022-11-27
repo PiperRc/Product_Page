@@ -2,3 +2,5 @@
 image width to 100%;
 
 2)images and position
+
+3)combining display:grid and display:flex
