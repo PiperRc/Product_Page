@@ -19,41 +19,61 @@ html {
    --black-color: hsl(0, 0%, 0%);
 }
 
+body {
+   position: relative;
+   
+}
+
 main {
    padding-bottom: 5rem;
 }
 
-/* navbar */
+/* main-navbar */
 
-nav.navbar {
+.main-navbar {
    display: grid;
    grid-template-columns: 1fr 8fr 2fr 1.5fr;
    align-items: center;
    grid-auto-rows: 6rem;
 }
 
-.hamburger,
-.nav-logo,
-.nav-cart,
-.nav-avatar{
-   /* display: block; */
-}
-
-.nav-links{
+.main-nav-links {
    display: none;
 
 }
+
 .hamburger {
    justify-self: end;
 }
 
-.nav-logo{
+.nav-logo {
    margin-left: 2rem;
 }
 
-.nav-avatar{
-   width:2rem;
+.nav-avatar {
+   width: 2rem;
 }
+
+/* hidden nav */
+.hidden-navbar {
+   display: none;
+   z-index: 1000;
+   position: absolute;
+   top: 0;
+   width: 50%;
+   background-color: red;
+   position: fixed;
+   height: 100vh;
+}
+
+/* when hamburger is clicked */
+
+.hidden-navbar-reveal{
+   display:block;
+}
+
+
+.hidden-nav-links {}
 
 
 /* product-image*/
@@ -217,6 +237,4 @@ nav.navbar {
    padding-top: .3rem;
 }
 
-@media screen and (min-width: 480px){
-
-}
+@media screen and (min-width: 480px) {}
