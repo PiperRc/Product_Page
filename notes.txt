@@ -25,20 +25,38 @@ DESIGN
 </section>
 
 
-
-
-
-
-
 </main>
 
 
 </body>
 
+   <div>
+      <a href="#">Collections</a>
+      <a href="#">Men</a>
+      <a href="#">Women</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
 
 
+<div class="nav-links">
+<img src>star image>
+
+ <a href="">Collections</a>
+ <a href="">Men</a>
+ <a href="">Women</a>
+ <a href="">About</a>
+ <a href="">Contact</a>
+
+</div>
 
 
+.nav-links{
+    width:50%;
+    height:100vh;
+    background-color:green;
+    z-index:100;
+}
 
 
 

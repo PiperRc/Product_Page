@@ -1,6 +1,4 @@
-1) placing images in a div make them easier to work with,then setting the 
-image width to 100%;
 
-2)images and position
 
-3)combining display:grid and display:flex
+1)combining display:grid and display:flex
+2)using differnt fr measurements to space elments in a grid
