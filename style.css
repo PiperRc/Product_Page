@@ -24,41 +24,37 @@ main {
 }
 
 /* navbar */
-.navbar {
-   /* background-color: lightcyan; */
+
+nav.navbar {
    display: grid;
-   grid-template-rows: 7rem;
-   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-columns: 1fr 8fr 2fr 1.5fr;
    align-items: center;
-   justify-items: center;
+   grid-auto-rows: 6rem;
 }
 
+.hamburger,
+.nav-logo,
+.nav-cart,
+.nav-avatar{
+   /* display: block; */
+}
+
+.nav-links{
+   display: none;
+
+}
 .hamburger {
-   width: 2rem;
-   padding-top: 0.5rem;
-   /* justify-self: end; */
-   /* margin-right: 1rem; */
-   margin-left: 2rem;
-}
-
-.logo {
-   width: 14rem;
-}
-
-
-
-.cart-logo {
-   width: 2rem;
    justify-self: end;
 }
 
-.profile-picture {
-   width: 3rem;
+.nav-logo{
+   margin-left: 2rem;
 }
 
-.navbar div img {
-   width: 100%;
+.nav-avatar{
+   width:2rem;
 }
+
 
 /* product-image*/
 .product-image {
@@ -151,7 +147,7 @@ main {
    margin-left: 1rem;
    background-color: var(--pale-orange);
    color: var(--main-color);
-   padding:.3rem;
+   padding: .3rem;
    border-radius: .5rem;
 }
 
@@ -219,4 +215,8 @@ main {
    color: var(--text-white);
    font-weight: bold;
    padding-top: .3rem;
+}
+
+@media screen and (min-width: 480px){
+
 }
