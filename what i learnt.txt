@@ -1,4 +1,4 @@
 
 
-1)combining display:grid and display:flex
+1)combining display:grid and display:flex/ using display flex in a display grid box
 2)using differnt fr measurements to space elments in a grid
