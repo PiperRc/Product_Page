@@ -113,6 +113,7 @@ align-self: center;
 .product-image {
    /* border:2px solid darkorchid; */
    position: relative;
+   
 }
 
 .product-image img:nth-child(1) {
