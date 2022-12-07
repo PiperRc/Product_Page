@@ -2,3 +2,102 @@
 
 1)combining display:grid and display:flex/ using display flex in a display grid box
 2)using differnt fr measurements to space elments in a grid
+
+3)to animante navbar,have a parent element which will have width:0 % and postion properties,height:50%;,width:50%;top:0.
+then a child element which will have the content
+
+html:
+
+  <nav class="hidden-navbar">
+    <div class="hidden-links">
+      <img src="images/icon-close.svg" alt="icon-close" class="x-icon">
+      <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Collections</a>
+      <a href="#">Men</a>
+      <a href="#">Women</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  css:
+
+.hidden-navbar{
+   background-color: white;
+   width:0%;
+   height:100vh;
+   position: fixed;
+   top: 0;
+   z-index: 100;
+   transition: width .4s ease-in-out ;
+  
+   
+}
+
+.hidden-links{
+
+   visibility: hidden;
+   opacity: 0;
+   transition: opacity .4s linear;
+
+   width: 100%;
+   height: 100%;
+   font-size: 2rem;
+   display: grid;
+   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+   align-items: end;
+   padding: 1.5rem;
+   padding-top: 0;
+   padding-bottom: 25rem;
+}
+
+.x-icon{
+align-self: center;
+}
+
+.hidden-navbar a {
+   text-decoration: none;
+   color: black;
+   font-weight: bold;
+}
+
+/* when hamburger is clicked */
+
+
+.hidden-navbar-reveal {
+  width:50%;
+}
+.hidden-links-reveal{
+   visibility: visible;
+   opacity: 1;
+}
+
+js:
+const body=document.querySelector('body');
+
+const hamburger = document.querySelector('.hamburger');
+
+const hiddenNavbar = document.querySelector('.hidden-navbar');
+
+const hiddenLinks=document.querySelector('.hidden-links');
+
+const container= document.querySelector('.container')
+
+
+const x =document.querySelector('.x-icon');
+
+
+hamburger.addEventListener('click', () => {
+  
+    hiddenNavbar.classList.add('hidden-navbar-reveal');
+    hiddenLinks.classList.add('hidden-links-reveal')
+  
+    container.classList.add('container-opacity');
+   
+})
+
+x.addEventListener('click',()=>{
+    hiddenNavbar.classList.remove('hidden-navbar-reveal');
+    hiddenLinks.classList.remove('hidden-links-reveal')
+    container.classList.remove('container-opacity');
+    
+})

@@ -19,13 +19,13 @@ html {
    --black-color: hsl(0, 0%, 0%);
 }
 
-
-
-
 main {
    padding-bottom: 5rem;
 }
 
+.container-opacity{
+opacity: .5;
+}
 /* main-navbar */
 
 .main-navbar {
@@ -54,26 +54,42 @@ main {
 }
 
 /* hidden nav */
-.hidden-navbar {
-   visibility: hidden;
+
+.hidden-navbar{
+   background-color: white;
+   width:0%;
+   height:100vh;
    position: fixed;
    top: 0;
    z-index: 100;
-   width: 50%;
-   background-color: aqua;
-   height: 100vh;
-   padding: 1.5rem;
+   transition: width .4s ease-in-out ;
+  
+   
 }
 
-.hidden-nav-links {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-evenly;
-   height: 50%;
+.hidden-links{
+   /* display: none; */
+
+   visibility: hidden;
+   opacity: 0;
+   transition: opacity .4s linear;
+
+   width: 100%;
+   height: 100%;
    font-size: 2rem;
+   display: grid;
+   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+   align-items: end;
+   padding: 1.5rem;
+   padding-top: 0;
+   padding-bottom: 25rem;
 }
 
-.hidden-nav-links a {
+.x-icon{
+align-self: center;
+}
+
+.hidden-navbar a {
    text-decoration: none;
    color: black;
    font-weight: bold;
@@ -83,10 +99,14 @@ main {
 
 
 .hidden-navbar-reveal {
-   visibility: visible;
-
+   /* width: 50%; */
+  width:50%;
 }
-
+.hidden-links-reveal{
+   /* display: grid; */
+   visibility: visible;
+   opacity: 1;
+}
 
 
 /* product-image*/
@@ -221,6 +241,7 @@ main {
 
 /* cart-addition */
 .cart-addition {
+   /* ADD ANIMATIONS TO BUTTONS */
    background-color: var(--main-color);
    margin-top: 1.5rem;
    display: flex;

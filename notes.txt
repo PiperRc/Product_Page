@@ -91,3 +91,37 @@ $250.00
 Add to cart
 
 _____
+
+
+.hidden-navbar {
+   visibility: hidden;
+   position: fixed;
+   top: 0;
+   z-index: 100;
+   width: 50%;
+   background-color: aqua;
+   height: 100vh;
+   padding: 1.5rem;
+}
+
+.hidden-navbar div {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   height: 50%;
+   font-size: 2rem;
+}
+
+.hidden-navbar div a {
+   text-decoration: none;
+   color: black;
+   font-weight: bold;
+}
+
+/* when hamburger is clicked */
+
+
+.hidden-navbar-reveal {
+   visibility: visible;
+
+}
