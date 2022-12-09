@@ -23,9 +23,10 @@ main {
    padding-bottom: 5rem;
 }
 
-.container-opacity{
-opacity: .5;
+.container-opacity {
+   opacity: .5;
 }
+
 /* main-navbar */
 
 .main-navbar {
@@ -34,6 +35,11 @@ opacity: .5;
    align-items: center;
    grid-template-rows: 6rem;
 
+}
+
+.main-navbar img,
+.main-navbar a {
+   cursor: pointer;
 }
 
 .main-nav-links {
@@ -53,21 +59,50 @@ opacity: .5;
    width: 2rem;
 }
 
+.nav-cart{
+   position: relative;
+}
+
+.nav-cart-span{
+   position: absolute;
+   display: none;
+   border: 1px solid red;
+   color: white;
+   font-weight: bold;
+   background-color: var(--main-color);
+   padding: 0.2rem;
+   /* border-radius: 10%; */
+   font-size: 1.5rem;
+   border-radius: 40%;
+   padding-left: 0.5rem;
+   padding-right: 0.5rem;
+   top: -1.2rem;
+   right: 2rem;
+   /* display: block; */
+   /* text-align: center;*/
+}
+
+.nav-cart-span-reveal{
+   display: block;
+}
+
+/*  */
+
 /* hidden nav */
 
-.hidden-navbar{
+.hidden-navbar {
    background-color: white;
-   width:0%;
-   height:100vh;
+   width: 0%;
+   height: 100vh;
    position: fixed;
    top: 0;
    z-index: 100;
-   transition: width .4s ease-in-out ;
-  
-   
+   transition: width .4s ease-in-out;
+
+
 }
 
-.hidden-links{
+.hidden-links {
    /* display: none; */
 
    visibility: hidden;
@@ -85,8 +120,8 @@ opacity: .5;
    padding-bottom: 25rem;
 }
 
-.x-icon{
-align-self: center;
+.x-icon {
+   align-self: center;
 }
 
 .hidden-navbar a {
@@ -100,9 +135,10 @@ align-self: center;
 
 .hidden-navbar-reveal {
    /* width: 50%; */
-  width:50%;
+   width: 50%;
 }
-.hidden-links-reveal{
+
+.hidden-links-reveal {
    /* display: grid; */
    visibility: visible;
    opacity: 1;
@@ -113,7 +149,7 @@ align-self: center;
 .product-image {
    /* border:2px solid darkorchid; */
    position: relative;
-   
+
 }
 
 .product-image img:nth-child(1) {
@@ -130,6 +166,11 @@ align-self: center;
    border-radius: 50%;
    padding: 1.3rem;
    background-color: white;
+}
+
+.previous-icon,
+.next-icon {
+   cursor: pointer;
 }
 
 .previous-icon {
@@ -230,6 +271,12 @@ align-self: center;
 
 .product-amount span {
    font-size: 2rem;
+}
+
+.plus-sign,
+.minus-sign,
+.cart-addition {
+   cursor: pointer;
 }
 
 .plus-sign {
