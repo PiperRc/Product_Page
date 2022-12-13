@@ -222,3 +222,41 @@ rightArrow.addEventListener('click', () => {
     productImage.src = imgSrc[imgNum];
 
 })
+
+5)
+
+use:
+<body>
+   <div class='container'>
+   <nav class='hidden-navbar'>
+   </nav>
+      <main>
+          <nav>
+          </nav>
+      </main>
+    </div>
+</body>
+
+
+6)centering:
+ top: 50%;
+   transform: translateY(-50%);
+
+
+7)centering a absoulte position :
+  border: 1px solid green;
+   width: set width
+   height:set heigh
+   margin: auto;
+   top: 0rem;
+   right: 0;
+   left: 0;
+   bottom:0;
+
+8)
+center using grid
+section {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}

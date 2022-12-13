@@ -59,30 +59,26 @@ main {
    width: 2rem;
 }
 
-.nav-cart{
+.nav-cart {
    position: relative;
 }
 
-.nav-cart-span{
-   position: absolute;
+.nav-cart-span {
    display: none;
-   border: 1px solid red;
+   position: absolute;
+   top: -12px;
+   right: 20px;
+   font-size: 1.5rem;
    color: white;
    font-weight: bold;
    background-color: var(--main-color);
    padding: 0.2rem;
-   /* border-radius: 10%; */
-   font-size: 1.5rem;
-   border-radius: 40%;
    padding-left: 0.5rem;
    padding-right: 0.5rem;
-   top: -1.2rem;
-   right: 2rem;
-   /* display: block; */
-   /* text-align: center;*/
+   border-radius: 40%;
 }
 
-.nav-cart-span-reveal{
+.nav-cart-span-reveal {
    display: block;
 }
 
@@ -98,17 +94,12 @@ main {
    top: 0;
    z-index: 100;
    transition: width .4s ease-in-out;
-
-
 }
 
 .hidden-links {
-   /* display: none; */
-
    visibility: hidden;
    opacity: 0;
    transition: opacity .4s linear;
-
    width: 100%;
    height: 100%;
    font-size: 2rem;
@@ -134,12 +125,10 @@ main {
 
 
 .hidden-navbar-reveal {
-   /* width: 50%; */
    width: 50%;
 }
 
 .hidden-links-reveal {
-   /* display: grid; */
    visibility: visible;
    opacity: 1;
 }
@@ -147,9 +136,7 @@ main {
 
 /* product-image*/
 .product-image {
-   /* border:2px solid darkorchid; */
    position: relative;
-
 }
 
 .product-image img:nth-child(1) {
@@ -160,7 +147,6 @@ main {
 .next-icon {
    width: 4rem;
    position: absolute;
-   /* border: 2px solid darkred; */
    top: 50%;
    transform: translateY(-50%);
    border-radius: 50%;
@@ -181,6 +167,39 @@ main {
 .next-icon {
    right: 1rem;
 }
+
+.cart-modal {
+ 
+   z-index: 100;
+   background-color: white;
+   color: black;
+   position: absolute;
+   border: 1px solid green;
+   width: 95%;
+   height: 90%;
+   margin: auto;
+   top: 1rem;
+   right: 0;
+   left: 0;
+   display: none;
+   grid-template-rows: 1fr 3fr;
+}
+
+.cart-modal-reveal{
+   display: grid;
+}
+
+.cart-modal div:nth-child(1){
+font-size: 2rem;
+border:2px solid blueviolet;
+}
+
+.cart-modal div:nth-child(2){
+font-size: 2rem;
+border:2px solid red;
+
+}
+
 
 /* product-info */
 /* product-description */

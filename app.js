@@ -6,10 +6,8 @@ const x = document.querySelector('.x-icon');
 const container = document.querySelector('.container');
 
 hamburger.addEventListener('click', () => {
-
     hiddenNavbar.classList.add('hidden-navbar-reveal');
     hiddenLinks.classList.add('hidden-links-reveal')
-
     container.classList.add('container-opacity');
 
 })
@@ -24,9 +22,7 @@ x.addEventListener('click', () => {
 
 // hero image
 const leftArrow = document.querySelector('.previous-icon');
-
 const rightArrow = document.querySelector('.next-icon');
-
 const productImage = document.querySelector('.product-image img');
 
 let imgNum = 1;
@@ -36,8 +32,8 @@ const imgSrc = {
     2: 'images/image-product-2.jpg',
     3: 'images/image-product-3.jpg',
     4: 'images/image-product-4.jpg',
-
 }
+
 leftArrow.addEventListener('click', () => {
     if (imgNum > 1) {
         --imgNum;
@@ -67,37 +63,40 @@ rightArrow.addEventListener('click', () => {
 // cart
 const minusSign = document.querySelector('.minus-sign');
 const plusSign = document.querySelector('.plus-sign');
-
-const cartSpan = document.querySelector('.nav-cart-span');
-
+const navCartSpan = document.querySelector('.nav-cart-span');
 const cartNumSpan = document.querySelector('.product-amount span');
-
 let cartNum = parseInt(document.querySelector('.product-amount span').textContent);
-
 const cartAddition = document.querySelector('.cart-addition')
 
 
 minusSign.addEventListener('click', () => {
-
     if (cartNum > 0) {
         --cartNum;
     }
-
     cartNumSpan.textContent = cartNum;
-
-
 })
 
 plusSign.addEventListener('click', () => {
-
     ++cartNum
     cartNumSpan.textContent = cartNum;
-
 })
 
 cartAddition.addEventListener('click', () => {
-    cartSpan.innerHTML=cartNum;
-    cartSpan.classList.add('nav-cart-span-reveal');
+    navCartSpan.innerHTML = cartNum;
+    navCartSpan.classList.add('nav-cart-span-reveal');
 
 })
 
+// 
+const navCart = document.querySelector('.nav-cart')
+const cartModal = document.querySelector('.cart-modal');
+
+navCart.addEventListener('click', () => {
+    if (cartModal.classList.contains('cart-modal-reveal')) {
+        cartModal.classList.remove('cart-modal-reveal');
+    }
+    else {
+        cartModal.classList.add('cart-modal-reveal');
+    }
+    
+})
