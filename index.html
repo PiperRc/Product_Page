@@ -15,10 +15,10 @@
 
 <body>
 
-  <nav class="hidden-navbar">
-    <div class="hidden-links">
+  <nav class="mobile-navbar">
+    <div class="mobile-links">
       <img src="images/icon-close.svg" alt="icon-close" class="x-icon">
-      <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Collections</a>
+      <a href="#">Collections</a>
       <a href="#">Men</a>
       <a href="#">Women</a>
       <a href="#">About</a>
@@ -67,9 +67,20 @@
         </div>
 
         <div class="cart-modal">
-          <div>Cart</div>
-          <div>Your cart is empty</div>
+          <div class="cart">Cart</div>
+
+          <div class="cart-fill">
+            <img src="images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail">
+            <div>
+              <p>Autumn Limited Edition..</p>
+              <p>$125.00 x <span></span> <span></span></p>
+            </div>
+            <img src="images/icon-delete.svg" alt="icon-delete" class="bin">
+            <button>Checkout</button>
+          </div>
+
         </div>
+
 
       </div>
 
@@ -85,7 +96,7 @@
 
         <!-- inner section two -->
 
-        <section class="product-cart">
+        <div class="product-cart">
 
           <div class="product-cost">
             <div> $125.00<span>50%</span></div>
@@ -103,7 +114,7 @@
             <span>Add to cart</span>
           </div>
 
-        </section>
+        </div>
 
       </div>
 
