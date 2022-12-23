@@ -63,47 +63,59 @@ rightArrow.addEventListener('click', () => {
 // cart
 const minusSign = document.querySelector('.minus-sign');
 const plusSign = document.querySelector('.plus-sign');
+
 const navCartSpan = document.querySelector('.nav-cart-span');
 const cartNumSpan = document.querySelector('.product-amount span');
+
 let cartNum = parseInt(document.querySelector('.product-amount span').textContent);
+
 const cartAddition = document.querySelector('.cart-addition');
 
 // modal
 let numProducts = document.querySelector('.cart-fill div p:nth-child(2) span:nth-child(1)')
-let totalAmount = document.querySelector('.cart-fill div p:nth-child(2) span:nth-child(2');
+let totalAmount = document.querySelector('.cart-fill div p:nth-child(2) span:nth-child(2)');
 
-
+// modal content
+const cartFill =document.querySelector('.cart-fill');
+const cartFillInfo=cartFill.innerHTML;
 
 minusSign.addEventListener('click', () => {
     if (cartNum > 0) {
         --cartNum;
     }
+    // the number in the middle of the div
     cartNumSpan.textContent = cartNum;
 })
 
 plusSign.addEventListener('click', () => {
     ++cartNum
+    // the number in the middle of the div
     cartNumSpan.textContent = cartNum;
 })
+// two main buttons:
 
+// add number to cart
 cartAddition.addEventListener('click', () => {
-    navCartSpan.innerHTML = cartNum;
-    navCartSpan.classList.add('nav-cart-span-reveal');
-    numProducts.innerHTML = cartNum;
-    totalAmount.innerHTML = `$${cartNum * 125}.00`
+    if (cartNum > 0) {
+
+        // the cart symbol in the navbar
+        navCartSpan.innerHTML = cartNum;
+        navCartSpan.classList.add('nav-cart-span-reveal');
+        // modal
+        numProducts.innerHTML = cartNum;
+        totalAmount.innerHTML = `$${cartNum * 125}.00`
+        
+    }
 
 })
-
-// navCart
+// navCart button
 
 const navCart = document.querySelector('.nav-cart')
 const cartModal = document.querySelector('.cart-modal');
 
 navCart.addEventListener('click', () => {
 
-    if (cartNum > 0) {
-
-
+    if (parseInt(navCartSpan.innerHTML) > 0 && cartNum !=0) {
         if (cartModal.classList.contains('cart-modal-reveal')) {
             cartModal.classList.remove('cart-modal-reveal');
         }
@@ -111,4 +123,17 @@ navCart.addEventListener('click', () => {
             cartModal.classList.add('cart-modal-reveal');
         }
     }
+})
+
+// bin
+const bin=document.querySelector('.bin');
+
+
+bin.addEventListener('click',()=>{
+    navCartSpan.classList.remove('nav-cart-span-reveal');
+    cartNum=0;
+    cartNumSpan.innerHTML=cartNum;
+    cartModal.classList.remove('cart-modal-reveal');
+
+    
 })
