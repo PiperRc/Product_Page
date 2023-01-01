@@ -3,3 +3,7 @@
 2)images and position
 
 3)should i put images in a div
+
+.nth child affects every div?
+
+when multiple are clikced js;

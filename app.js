@@ -76,8 +76,8 @@ let numProducts = document.querySelector('.cart-fill div p:nth-child(2) span:nth
 let totalAmount = document.querySelector('.cart-fill div p:nth-child(2) span:nth-child(2)');
 
 // modal content
-const cartFill =document.querySelector('.cart-fill');
-const cartFillInfo=cartFill.innerHTML;
+const cartFill = document.querySelector('.cart-fill');
+const cartFillInfo = cartFill.innerHTML;
 
 minusSign.addEventListener('click', () => {
     if (cartNum > 0) {
@@ -104,7 +104,7 @@ cartAddition.addEventListener('click', () => {
         // modal
         numProducts.innerHTML = cartNum;
         totalAmount.innerHTML = `$${cartNum * 125}.00`
-        
+
     }
 
 })
@@ -115,7 +115,7 @@ const cartModal = document.querySelector('.cart-modal');
 
 navCart.addEventListener('click', () => {
 
-    if (parseInt(navCartSpan.innerHTML) > 0 && cartNum !=0) {
+    if (parseInt(navCartSpan.innerHTML) > 0 && cartNum != 0) {
         if (cartModal.classList.contains('cart-modal-reveal')) {
             cartModal.classList.remove('cart-modal-reveal');
         }
@@ -126,14 +126,42 @@ navCart.addEventListener('click', () => {
 })
 
 // bin
-const bin=document.querySelector('.bin');
+const bin = document.querySelector('.bin');
 
 
-bin.addEventListener('click',()=>{
+bin.addEventListener('click', () => {
     navCartSpan.classList.remove('nav-cart-span-reveal');
-    cartNum=0;
-    cartNumSpan.innerHTML=cartNum;
+    cartNum = 0;
+    cartNumSpan.innerHTML = cartNum;
     cartModal.classList.remove('cart-modal-reveal');
 
-    
+
+})
+
+// lighbox
+const heroImage = document.querySelector('.hero-image');
+const img1=document.querySelector('.lightbox-1');
+const img2=document.querySelector('.lightbox-2');
+const img3=document.querySelector('.lightbox-3');
+const img4=document.querySelector('.lightbox-4');
+
+img1.addEventListener('click',()=>{
+    heroImage.src="images/image-product-1.jpg";
+    img1.classList.add('lightbox-img-click');
+
+})
+
+img2.addEventListener('click',()=>{
+    heroImage.src="images/image-product-2.jpg";
+    img2.classList.add('lightbox-img-click');
+})
+
+img3.addEventListener('click',()=>{
+    heroImage.src="images/image-product-3.jpg";
+    img3.classList.add('lightbox-img-click');
+})
+
+img4.addEventListener('click',()=>{
+    heroImage.src="images/image-product-4.jpg";
+    img4.classList.add('lightbox-img-click');
 })

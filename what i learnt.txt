@@ -260,3 +260,13 @@ section {
   justify-content: center;
   align-content: center;
 }
+
+
+FROM NOW ON DO:
+
+<body>
+     <div class='container'>
+       <main>
+      </main>
+      </div>
+</body>
