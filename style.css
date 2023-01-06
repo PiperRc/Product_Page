@@ -17,7 +17,7 @@ html {
    --lk-blue: hsl(223, 64%, 98%);
    --text-white: hsl(0, 9%, 100%);
    --black-color: hsl(0, 0%, 0%);
-   --img-width: 90%;
+   --img-width: 100%;
 }
 
 main {
@@ -143,6 +143,10 @@ main {
    cursor: pointer;
 }
 
+.lightbox {
+   display: none;
+}
+
 .previous-icon,
 .next-icon {
    width: 4rem;
@@ -226,6 +230,7 @@ main {
 
 
 .bin {
+   cursor: pointer;
    grid-area: bin;
    justify-self: end;
    align-self: center;
@@ -383,7 +388,7 @@ main {
    padding-top: .3rem;
 }
 
-@media screen and (min-width:1000px) {
+@media screen and (min-width:1350px) {
    .hamburger {
       display: none;
    }
@@ -430,14 +435,23 @@ main {
    main {
 
       border: 1px solid purple;
+      display: flex;
       display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      padding: 4rem 0 3rem 4rem;
+      padding: 9rem;
+      column-gap: 7rem;
+      grid-template-columns: 1fr 1fr;
+      /* padding: 4rem 0 3rem 4rem;  */
+
+   }
+
+   .product-image {
+      /* justify-self: end;
+      padding-left:20rem; */
    }
 
    /*  */
    .hero-image {
-      width: var(--img-width);
+      /*  */
    }
 
    .previous-icon,
@@ -449,6 +463,8 @@ main {
    /* .product-info {
       align-self: center;
    } */
+
+
 
    .product-description h2 {
       font-size: 4rem;
@@ -491,8 +507,13 @@ main {
 
    }
 
-   .product-info {
+   /* .product-info {
       margin-top: 7rem;
+   } */
+
+   .product-info {
+      justify-self: end;
+      padding-top:10rem;
    }
 
    /* lighbox */
@@ -500,22 +521,43 @@ main {
       width: var(--img-width);
       display: flex;
       justify-content: space-between;
-      padding-top:3rem;
+      padding-top: 3rem;
    }
 
-   .lightbox img{
-      width:20%;
+   .lightbox img {
+      width: 20%;
       border-radius: 1rem;
-     cursor: pointer;
-     
+      cursor: pointer;
+
       /* height: 80px; */
    }
-   .lightbox img:hover{
+
+   .lightbox img:hover {
       opacity: .5;
    }
 
-   .lightbox-img-click{
-      border:5px solid purple;
+   .lightbox-img-click {
+      border: 5px solid purple;
+   }
+
+   /*  */
+
+   .cart-modal {
+      /* display: block; */
+      border: 2px solid green;
+      left: 80rem;
+      left:800px;
+      top: -10rem;
+      top:-100px;
+      width: 30rem;
+      height: 23rem;
+
+
+   }
+
+   .cart-fill img:nth-child(1){
+      width:100%;
+      
    }
 
 }

@@ -145,7 +145,7 @@ const img2=document.querySelector('.lightbox-2');
 const img3=document.querySelector('.lightbox-3');
 const img4=document.querySelector('.lightbox-4');
 
-img1.addEventListener('click',()=>{
+img1.addEventListener('click',()=>{ 
     heroImage.src="images/image-product-1.jpg";
     img1.classList.add('lightbox-img-click');
 
