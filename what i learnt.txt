@@ -270,3 +270,8 @@ FROM NOW ON DO:
       </main>
       </div>
 </body>
+
+9)setting top,right,left,bottom to 0
+
+10)what 100% of an image means when you deal with grid and flex:
+putting the 50% of the image will take up 50% of the grid/flex container

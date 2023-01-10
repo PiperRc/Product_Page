@@ -1,3 +1,4 @@
+// alert('animate buttons')
 // hidden navbar
 const hamburger = document.querySelector('.hamburger');
 const mobileNavbar = document.querySelector('.mobile-navbar');
@@ -68,6 +69,7 @@ const navCartSpan = document.querySelector('.nav-cart-span');
 const cartNumSpan = document.querySelector('.product-amount span');
 
 let cartNum = parseInt(document.querySelector('.product-amount span').textContent);
+let thumbnail=document.querySelector('.cart-fill img:nth-child(1)')
 
 const cartAddition = document.querySelector('.cart-addition');
 
@@ -103,7 +105,9 @@ cartAddition.addEventListener('click', () => {
         navCartSpan.classList.add('nav-cart-span-reveal');
         // modal
         numProducts.innerHTML = cartNum;
-        totalAmount.innerHTML = `$${cartNum * 125}.00`
+        totalAmount.innerHTML = `$${cartNum * 125}.00`;
+        thumbnail.src= imgSrc[imgNum];
+
 
     }
 
@@ -121,6 +125,7 @@ navCart.addEventListener('click', () => {
         }
         else {
             cartModal.classList.add('cart-modal-reveal');
+            thumbnail.src= imgSrc[imgNum];
         }
     }
 })
@@ -145,23 +150,23 @@ const img2=document.querySelector('.lightbox-2');
 const img3=document.querySelector('.lightbox-3');
 const img4=document.querySelector('.lightbox-4');
 
-img1.addEventListener('click',()=>{ 
+img1.addEventListener('mouseover',()=>{ 
     heroImage.src="images/image-product-1.jpg";
-    img1.classList.add('lightbox-img-click');
+    
 
 })
 
-img2.addEventListener('click',()=>{
+img2.addEventListener('mouseover',()=>{
     heroImage.src="images/image-product-2.jpg";
-    img2.classList.add('lightbox-img-click');
+    
 })
 
-img3.addEventListener('click',()=>{
+img3.addEventListener('mouseover',()=>{
     heroImage.src="images/image-product-3.jpg";
-    img3.classList.add('lightbox-img-click');
+   
 })
 
-img4.addEventListener('click',()=>{
+img4.addEventListener('mouseover',()=>{
     heroImage.src="images/image-product-4.jpg";
-    img4.classList.add('lightbox-img-click');
+    
 })
