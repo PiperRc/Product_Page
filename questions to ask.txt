@@ -7,3 +7,8 @@
 .nth child affects every div?
 
 when multiple are clikced js;
+
+em vs rem vs percentage;
+
+clamp
+does clamp work with position

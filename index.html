@@ -44,10 +44,7 @@
       </a>
 
       <div class="main-nav-links">
-
         <a href="#">Collections</a>
-
-
         <a href="#">Men</a>
         <a href="#">Women</a>
         <a href="#">About</a>
@@ -118,16 +115,9 @@
             <a href="images/image-product-4.jpg">
               <img src="images/image-product-4-thumbnail.jpg" alt="" class="lightbox-4">
             </a>
-
-
-            <!-- <img src="images/image-product-1-thumbnail.jpg" alt="" class="lightbox-1">
-            <img src="images/image-product-2-thumbnail.jpg" alt="" class="lightbox-2">
-            <img src="images/image-product-3-thumbnail.jpg" alt="" class="lightbox-3">
-            <img src="images/image-product-4-thumbnail.jpg" alt="" class="lightbox-4"> -->
           </div>
 
         </div>
-
 
       </div>
 
@@ -173,17 +163,19 @@
 
 
 </body>
+
+<!-- lightgallery -->
 <script src="node_modules/lightgallery/lightgallery.umd.js"></script>
 
-<!-- plugin -->
+<!-- lightgallery plugin -->
 <script src="node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.umd.js"></script>
 
 <script type="text/javascript">
-    lightGallery(document.querySelector('.lightbox'), {
-        plugins: [lgThumbnail],
-        speed: 200,
-        mode: 'lg-fade',
-    });
+  lightGallery(document.querySelector('.lightbox'), {
+    plugins: [lgThumbnail],
+    speed: 200,
+    mode: 'lg-fade',
+  });
 </script>
 
 

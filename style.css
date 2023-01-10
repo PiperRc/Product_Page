@@ -27,8 +27,6 @@ main {
 .container {
    margin: 0 auto;
    max-width: 800px;
-   border: 2px solid red;
-
 }
 
 .container-opacity {
@@ -199,8 +197,6 @@ main {
    right: 0;
    left: 0;
    font-size: 2rem;
-
-
 }
 
 .cart-modal-reveal {
@@ -248,13 +244,10 @@ main {
    grid-area: bin;
    justify-self: end;
    align-self: center;
-   /* align-self: start; */
-
 }
 
 .cart-fill button {
    grid-area: checkout;
-   /* height: 6rem; */
    height: 60%;
    align-self: start;
    background-color: var;
@@ -386,10 +379,6 @@ main {
    align-items: center;
 }
 
-/* .cart-addition img, .cart-addition span{
-   color:var(--text-white);
-   font-weight: bold;
-} */
 .cart-addition img {
    padding-right: 1rem;
    height: 2rem;
@@ -463,31 +452,12 @@ main {
       padding: 9rem;
       column-gap: 7rem;
       grid-template-columns: 1fr 1fr;
-      /* padding: 4rem 0 3rem 4rem;  */
-
-   }
-
-   .product-image {
-      /* justify-self: end;
-      padding-left:20rem; */
-   }
-
-   /*  */
-   .hero-image {
-      /*  */
    }
 
    .previous-icon,
    .next-icon {
       display: none;
    }
-
-   /*  */
-   /* .product-info {
-      align-self: center;
-   } */
-
-
 
    .product-description h2 {
       font-size: 4rem;
@@ -496,9 +466,6 @@ main {
    .product-description p {
       font-size: 2rem;
    }
-
-
-   /*  */
 
    .product-add-to-cart {
       display: grid;
@@ -509,7 +476,6 @@ main {
    .product-cost {
       grid-template-rows: 1fr 1fr;
       grid-template-columns: 1fr;
-
    }
 
    .product-cost div:nth-child(1) {
@@ -530,10 +496,6 @@ main {
 
    }
 
-   /* .product-info {
-      margin-top: 7rem;
-   } */
-
    .product-info {
       justify-self: end;
       padding-top: 10rem;
@@ -552,8 +514,6 @@ main {
       width: 100%;
       border-radius: 1rem;
       cursor: pointer;
-
-      /* height: 80px; */
    }
 
    .lightbox img:hover {
@@ -561,31 +521,20 @@ main {
       border: 3px solid var(--main-color);
    }
 
-
-
-   /*  */
+   .product-image {
+      position: static;
+   }
 
    .cart-modal {
-      display: block;
-      /* position: fixed;
-width:28rem;
-   height:20rem;
-  right:-100rem;
-   top:8.5rem; */
-
       position: absolute;
-      width: 28rem;
-      height: 20rem;
-      right: -160rem;
-      right: -1600px;
-      top: -10rem;
-      top: -100px;
-
+      width: 35rem;
+      height: 25rem;
+      left: 70%;
+      top: 13%;
    }
 
    .cart-fill img:nth-child(1) {
       width: 100%;
-
    }
 
 }
