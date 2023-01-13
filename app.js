@@ -1,5 +1,3 @@
-// alert('animate buttons')
-// hidden navbar
 const hamburger = document.querySelector('.hamburger');
 const mobileNavbar = document.querySelector('.mobile-navbar');
 const mobileLinks = document.querySelector('.mobile-links');
@@ -24,7 +22,7 @@ x.addEventListener('click', () => {
 // hero image
 const leftArrow = document.querySelector('.previous-icon');
 const rightArrow = document.querySelector('.next-icon');
-const productImage = document.querySelector('.product-image img');
+const heroImage = document.querySelector('.hero-image');
 
 let imgNum = 1;
 
@@ -43,7 +41,7 @@ leftArrow.addEventListener('click', () => {
         imgNum = 4;
     }
 
-    productImage.src = imgSrc[imgNum];
+    heroImage.src = imgSrc[imgNum];
 
 })
 
@@ -56,7 +54,7 @@ rightArrow.addEventListener('click', () => {
         imgNum = 1;
     }
 
-    productImage.src = imgSrc[imgNum];
+    heroImage.src = imgSrc[imgNum];
 
 })
 
@@ -65,13 +63,13 @@ rightArrow.addEventListener('click', () => {
 const minusSign = document.querySelector('.minus-sign');
 const plusSign = document.querySelector('.plus-sign');
 
-const navCartSpan = document.querySelector('.nav-cart-span');
-const cartNumSpan = document.querySelector('.product-amount span');
+const navCartQuantity = document.querySelector('.cart-quantity');
+const productQuantity = document.querySelector('.product-amount span');
 
-let cartNum = parseInt(document.querySelector('.product-amount span').textContent);
-let thumbnail=document.querySelector('.cart-fill img:nth-child(1)')
+let productQuantityNum = parseInt(document.querySelector('.product-amount span').textContent);
+let thumbnail = document.querySelector('.cart-fill img:nth-child(1)')
 
-const cartAddition = document.querySelector('.cart-addition');
+const productAddition = document.querySelector('.product-addition');
 
 // modal
 let numProducts = document.querySelector('.cart-fill div p:nth-child(2) span:nth-child(1)')
@@ -79,53 +77,50 @@ let totalAmount = document.querySelector('.cart-fill div p:nth-child(2) span:nth
 
 // modal content
 const cartFill = document.querySelector('.cart-fill');
-const cartFillInfo = cartFill.innerHTML;
+
 
 minusSign.addEventListener('click', () => {
-    if (cartNum > 0) {
-        --cartNum;
+    if (productQuantityNum > 0) {
+        --productQuantityNum;
     }
     // the number in the middle of the div
-    cartNumSpan.textContent = cartNum;
+    productQuantity.textContent = productQuantityNum;
 })
 
 plusSign.addEventListener('click', () => {
-    ++cartNum
+    ++productQuantityNum
     // the number in the middle of the div
-    cartNumSpan.textContent = cartNum;
+    productQuantity.textContent = productQuantityNum;
 })
 // two main buttons:
 
 // add number to cart
-cartAddition.addEventListener('click', () => {
-    if (cartNum > 0) {
-
+productAddition.addEventListener('click', () => {
+    if (productQuantityNum > 0) {
         // the cart symbol in the navbar
-        navCartSpan.innerHTML = cartNum;
-        navCartSpan.classList.add('nav-cart-span-reveal');
+        navCartQuantity.innerHTML = productQuantityNum;
+        navCartQuantity.classList.add('cart-quantity-reveal');
         // modal
-        numProducts.innerHTML = cartNum;
-        totalAmount.innerHTML = `$${cartNum * 125}.00`;
-        thumbnail.src= imgSrc[imgNum];
-
-
+        numProducts.innerHTML = productQuantityNum;
+        totalAmount.innerHTML = `$${productQuantityNum * 125}.00`;
+        thumbnail.src = imgSrc[imgNum];
     }
 
 })
 // navCart button
 
 const navCart = document.querySelector('.nav-cart')
-const cartModal = document.querySelector('.cart-modal');
+const modal = document.querySelector('.modal');
 
 navCart.addEventListener('click', () => {
 
-    if (parseInt(navCartSpan.innerHTML) > 0 && cartNum != 0) {
-        if (cartModal.classList.contains('cart-modal-reveal')) {
-            cartModal.classList.remove('cart-modal-reveal');
+    if (parseInt(navCartQuantity.innerHTML) > 0 && productQuantityNum != 0) {
+        if (modal.classList.contains('modal-reveal')) {
+            modal.classList.remove('modal-reveal');
         }
         else {
-            cartModal.classList.add('cart-modal-reveal');
-            thumbnail.src= imgSrc[imgNum];
+            modal.classList.add('modal-reveal');
+            thumbnail.src = imgSrc[imgNum];
         }
     }
 })
@@ -135,38 +130,33 @@ const bin = document.querySelector('.bin');
 
 
 bin.addEventListener('click', () => {
-    navCartSpan.classList.remove('nav-cart-span-reveal');
-    cartNum = 0;
-    cartNumSpan.innerHTML = cartNum;
-    cartModal.classList.remove('cart-modal-reveal');
-
+    navCartQuantity.classList.remove('cart-quantity-reveal');
+    productQuantityNum = 0;
+    productQuantity.innerHTML = productQuantityNum;
+    modal.classList.remove('modal-reveal');
 
 })
 
 // lighbox
-const heroImage = document.querySelector('.hero-image');
-const img1=document.querySelector('.lightbox-1');
-const img2=document.querySelector('.lightbox-2');
-const img3=document.querySelector('.lightbox-3');
-const img4=document.querySelector('.lightbox-4');
 
-img1.addEventListener('mouseover',()=>{ 
-    heroImage.src="images/image-product-1.jpg";
-    
+const img1 = document.querySelector('.lightbox-1');
+const img2 = document.querySelector('.lightbox-2');
+const img3 = document.querySelector('.lightbox-3');
+const img4 = document.querySelector('.lightbox-4');
 
+img1.addEventListener('mouseover', () => {
+    heroImage.src = "images/image-product-1.jpg";
 })
 
-img2.addEventListener('mouseover',()=>{
-    heroImage.src="images/image-product-2.jpg";
-    
+img2.addEventListener('mouseover', () => {
+    heroImage.src = "images/image-product-2.jpg";
 })
 
-img3.addEventListener('mouseover',()=>{
-    heroImage.src="images/image-product-3.jpg";
-   
+img3.addEventListener('mouseover', () => {
+    heroImage.src = "images/image-product-3.jpg";
 })
 
-img4.addEventListener('mouseover',()=>{
-    heroImage.src="images/image-product-4.jpg";
-    
+img4.addEventListener('mouseover', () => {
+    heroImage.src = "images/image-product-4.jpg";
+
 })

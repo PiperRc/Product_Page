@@ -12,3 +12,9 @@ em vs rem vs percentage;
 
 clamp
 does clamp work with position
+
+naming conventiosn
+
+record navbar on codepen
+
+record image slider css on codepen

@@ -72,7 +72,7 @@ main {
    position: relative;
 }
 
-.nav-cart-span {
+.cart-quantity {
    display: none;
    position: absolute;
    top: -12px;
@@ -87,11 +87,9 @@ main {
    border-radius: 40%;
 }
 
-.nav-cart-span-reveal {
+.cart-quantity-reveal {
    display: block;
 }
-
-/*  */
 
 /* mobile nav */
 
@@ -132,7 +130,6 @@ main {
 
 /* when hamburger is clicked */
 
-
 .mobile-navbar-reveal {
    width: 50%;
 }
@@ -141,7 +138,6 @@ main {
    visibility: visible;
    opacity: 1;
 }
-
 
 /* product-image*/
 .product-image {
@@ -175,7 +171,6 @@ main {
 
 .previous-icon {
    left: 1rem;
-
 }
 
 .next-icon {
@@ -183,7 +178,7 @@ main {
 }
 
 /* cart modal */
-.cart-modal {
+.modal {
    z-index: 100;
    display: none;
    background-color: white;
@@ -199,7 +194,7 @@ main {
    font-size: 2rem;
 }
 
-.cart-modal-reveal {
+.modal-reveal {
    display: block;
 }
 
@@ -246,6 +241,10 @@ main {
    align-self: center;
 }
 
+.bin-clicked {
+   display: block;
+}
+
 .cart-fill button {
    grid-area: checkout;
    height: 60%;
@@ -266,13 +265,13 @@ main {
 /* product-info */
 /* product-description */
 .product-description,
-.product-cart {
+.purchase-section {
    padding: 1.5rem;
    padding-top: 0;
 }
 
 .product-description h1 {
-   font-size: 1.3rem;
+   font-size: clamp (1.3rem, 2w, 5rem);
    color: var(--main-color);
    letter-spacing: .1rem;
    font-weight: bolder;
@@ -284,15 +283,11 @@ main {
 }
 
 .product-description p {
-
-   font-size: 1.55rem;
+   font-size: clamp(1.55rem, 2vw + 0.25rem, 2rem);
    padding-top: 2rem;
    color: var(--dg-blue);
    line-height: 1.4;
 }
-
-/* product-cart */
-/* product-cost */
 
 .product-cost {
    display: grid;
@@ -331,7 +326,7 @@ main {
 
 /* product amount */
 .product-amount,
-.cart-addition {
+.product-addition {
    border-radius: .5rem;
 }
 
@@ -356,7 +351,7 @@ main {
 
 .plus-sign,
 .minus-sign,
-.cart-addition {
+.product-addition {
    cursor: pointer;
 }
 
@@ -368,8 +363,8 @@ main {
    justify-self: left;
 }
 
-/* cart-addition */
-.cart-addition {
+/* product-addition */
+.product-addition {
    /* ADD ANIMATIONS TO BUTTONS */
    background-color: var(--main-color);
    margin-top: 1.5rem;
@@ -379,17 +374,19 @@ main {
    align-items: center;
 }
 
-.cart-addition img {
+.product-addition img {
    padding-right: 1rem;
    height: 2rem;
 }
 
-.cart-addition span {
+.product-addition span {
    font-size: 1.5rem;
    color: var(--text-white);
    font-weight: bold;
    padding-top: .3rem;
 }
+
+
 
 @media screen and (min-width:1000px) {
    .hamburger {
@@ -417,14 +414,11 @@ main {
       font-size: 2rem;
    }
 
-
-
    .main-nav-links a:hover {
       font-weight: bold;
       border-bottom: 3px solid var(--main-color);
 
    }
-
 
    .main-navbar {
       grid-template-columns: 1fr 9fr 7fr 1fr;
@@ -464,10 +458,10 @@ main {
    }
 
    .product-description p {
-      font-size: 2rem;
+      font-size: 1.7rem;
    }
 
-   .product-add-to-cart {
+   .product-purchase {
       display: grid;
       grid-template-columns: 1fr 2.5fr;
       column-gap: 2rem;
@@ -490,7 +484,7 @@ main {
       justify-self: start;
    }
 
-   .cart-addition {
+   .product-addition {
       margin-top: 0;
       width: 90%;
 
@@ -525,7 +519,7 @@ main {
       position: static;
    }
 
-   .cart-modal {
+   .modal {
       position: absolute;
       width: 35rem;
       height: 25rem;

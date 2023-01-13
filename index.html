@@ -4,13 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <!-- lighbtbox -->
-  <link type="text/css" rel="stylesheet" href="node_modules/lightgallery/css/lightgallery.css" />
-  <link type="text/css" rel="stylesheet" href="node_modules/lightgallery/css/lg-thumbnail.css" />
+  <link type="text/css" rel="stylesheet" href="lightgallery/css/lightgallery.css" />
+  <link type="text/css" rel="stylesheet" href="lightgallery/css/lg-thumbnail.css" />
   <!--  -->
 
   <!--own css-->
@@ -53,7 +52,7 @@
 
       <div class="nav-cart">
         <img src="images/icon-cart.svg" alt="icon-cart">
-        <span class="nav-cart-span">0</span>
+        <span class="cart-quantity">0</span>
       </div>
 
       <img src="images/image-avatar.png" alt="image-avatar" class="nav-avatar">
@@ -61,14 +60,6 @@
     </nav>
 
     <main>
-      <!-- <main>
-    <div class="product-image">
-
-    </div>
-    <div class="product-info">
-
-    </div>
-     </main> -->
 
       <div class="product-image">
         <img src="images/image-product-1.jpg" alt="image-product-1" class="hero-image">
@@ -81,7 +72,7 @@
           <img src="images/icon-next.svg" alt="icon-next">
         </div>
 
-        <div class="cart-modal">
+        <div class="modal">
           <div class="cart">Cart</div>
 
           <div class="cart-fill">
@@ -95,32 +86,25 @@
           </div>
 
         </div>
+        <div class="lightbox">
+          <a href="images/image-product-1.jpg">
+            <!-- img is displayed first,then a is displayed when clicked -->
+            <img src="images/image-product-1-thumbnail.jpg" alt="image-product-1" class="lightbox-1">
+          </a>
 
-        <div id="lightgallery">
+          <a href="images/image-product-2.jpg">
+            <img src="images/image-product-2-thumbnail.jpg" alt="image-product-2" class="lightbox-2">
+          </a>
 
-          <div class="lightbox">
-            <a href="images/image-product-1.jpg">
-              <!-- img is displayed first,then a is displayed when clicked -->
-              <img src="images/image-product-1-thumbnail.jpg" alt="" class="lightbox-1">
-            </a>
+          <a href="images/image-product-3.jpg">
+            <img src="images/image-product-3-thumbnail.jpg" alt="image-product-3" class="lightbox-3">
+          </a>
 
-            <a href="images/image-product-2.jpg">
-              <img src="images/image-product-2-thumbnail.jpg" alt="" class="lightbox-2">
-            </a>
-
-            <a href="images/image-product-3.jpg">
-              <img src="images/image-product-3-thumbnail.jpg" alt="" class="lightbox-3">
-            </a>
-
-            <a href="images/image-product-4.jpg">
-              <img src="images/image-product-4-thumbnail.jpg" alt="" class="lightbox-4">
-            </a>
-          </div>
-
+          <a href="images/image-product-4.jpg">
+            <img src="images/image-product-4-thumbnail.jpg" alt="image-product-4" class="lightbox-4">
+          </a>
         </div>
-
       </div>
-
 
       <div class="product-info">
         <!--inner section one -->
@@ -133,21 +117,21 @@
 
         <!-- inner section two -->
 
-        <div class="product-cart">
+        <div class="purchase-section">
 
           <div class="product-cost">
             <div> $125.00<span>50%</span></div>
             <div>$250.00</div>
           </div>
 
-          <div class="product-add-to-cart">
+          <div class="product-purchase">
             <div class="product-amount">
               <img src="images/icon-minus.svg" alt="icon-minus" class="minus-sign">
               <span>0</span>
               <img src="images/icon-plus.svg" alt="icon-plus" class="plus-sign">
             </div>
 
-            <div class="cart-addition">
+            <div class="product-addition">
               <img src="images/icon-cart.svg" alt="icon-cart">
               <span>Add to cart</span>
             </div>
@@ -157,7 +141,6 @@
 
       </div>
 
-
     </main>
   </div>
 
@@ -165,10 +148,10 @@
 </body>
 
 <!-- lightgallery -->
-<script src="node_modules/lightgallery/lightgallery.umd.js"></script>
+<script src="lightgallery/lightgallery.umd.js"></script>
 
 <!-- lightgallery plugin -->
-<script src="node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.umd.js"></script>
+<script src="lightgallery/plugins/thumbnail/lg-thumbnail.umd.js"></script>
 
 <script type="text/javascript">
   lightGallery(document.querySelector('.lightbox'), {
