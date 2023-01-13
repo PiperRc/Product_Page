@@ -39,7 +39,7 @@ Users should be able to:
 ### Links
 
 - [Solution URL](https://github.com/PiperRc/Product_Page)
-- [Live Site URL]](https://piperrc.github.io/Product_Page/)
+- [Live Site URL](https://piperrc.github.io/Product_Page/)
 
 ## My process
 
