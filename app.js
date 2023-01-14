@@ -144,19 +144,19 @@ const img2 = document.querySelector('.lightbox-2');
 const img3 = document.querySelector('.lightbox-3');
 const img4 = document.querySelector('.lightbox-4');
 
-img1.addEventListener('mouseover', () => {
+img1.addEventListener('click', () => {
     heroImage.src = "images/image-product-1.jpg";
 })
 
-img2.addEventListener('mouseover', () => {
+img2.addEventListener('click', () => {
     heroImage.src = "images/image-product-2.jpg";
 })
 
-img3.addEventListener('mouseover', () => {
+img3.addEventListener('click', () => {
     heroImage.src = "images/image-product-3.jpg";
 })
 
-img4.addEventListener('mouseover', () => {
+img4.addEventListener('click', () => {
     heroImage.src = "images/image-product-4.jpg";
 
 })

@@ -147,9 +147,13 @@ main {
 .hero-image {
    width: 100%;
    cursor: pointer;
+
+}
+.lightboxes{
+   display: none;
 }
 
-.lightbox {
+.gallery{
    display: none;
 }
 
@@ -388,6 +392,7 @@ main {
 
 
 
+
 @media screen and (min-width:1000px) {
    .hamburger {
       display: none;
@@ -495,8 +500,11 @@ main {
       padding-top: 10rem;
    }
 
+   .hero-image{
+      border-radius: 1rem;
+   }
    /* lighbox */
-   .lightbox {
+   .gallery{
       width: var(--img-width);
       display: flex;
       justify-content: space-between;
@@ -504,19 +512,20 @@ main {
       column-gap: 2rem;
    }
 
-   .lightbox img {
-      width: 100%;
+   .gallery img {
+      width: 20%;
       border-radius: 1rem;
       cursor: pointer;
    }
 
-   .lightbox img:hover {
+   .gallery img:hover {
       opacity: .5;
       border: 3px solid var(--main-color);
    }
 
    .product-image {
       position: static;
+      
    }
 
    .modal {
@@ -530,5 +539,7 @@ main {
    .cart-fill img:nth-child(1) {
       width: 100%;
    }
+
+  
 
 }

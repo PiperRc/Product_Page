@@ -38,6 +38,7 @@
 
       <img src="images/icon-menu.svg" alt="icon-menu" class="hamburger">
 
+
       <a href="#" class="nav-logo">
         <img src="images/logo.svg" alt="logo">
       </a>
@@ -61,8 +62,28 @@
 
     <main>
 
+
       <div class="product-image">
-        <img src="images/image-product-1.jpg" alt="image-product-1" class="hero-image">
+        
+        <div class="lightbox">
+          <a href="images/image-product-1.jpg">
+            <img src="images/image-product-1.jpg" alt="image-product-1" class="hero-image">
+          </a>
+         
+          <a href="images/image-product-2.jpg">
+            <img src="images/image-product-2-thumbnail.jpg" alt="image-product-2" class="lightboxes">
+          </a>
+
+          <a href="images/image-product-3.jpg">
+            <img src="images/image-product-3-thumbnail.jpg" alt="image-product-3" class="lightboxes">
+          </a>
+
+          <a href="images/image-product-4.jpg">
+            <img src="images/image-product-4-thumbnail.jpg" alt="image-product-4" class="lightboxes">
+          </a>
+        </div>
+      
+       
 
         <div class="previous-icon">
           <img src="images/icon-previous.svg" alt="icon-previous">
@@ -86,23 +107,11 @@
           </div>
 
         </div>
-        <div class="lightbox">
-          <a href="images/image-product-1.jpg">
-            <!-- img is displayed first,then a is displayed when clicked -->
+        <div class="gallery">
             <img src="images/image-product-1-thumbnail.jpg" alt="image-product-1" class="lightbox-1">
-          </a>
-
-          <a href="images/image-product-2.jpg">
             <img src="images/image-product-2-thumbnail.jpg" alt="image-product-2" class="lightbox-2">
-          </a>
-
-          <a href="images/image-product-3.jpg">
             <img src="images/image-product-3-thumbnail.jpg" alt="image-product-3" class="lightbox-3">
-          </a>
-
-          <a href="images/image-product-4.jpg">
             <img src="images/image-product-4-thumbnail.jpg" alt="image-product-4" class="lightbox-4">
-          </a>
         </div>
       </div>
 
@@ -158,6 +167,7 @@
     plugins: [lgThumbnail],
     speed: 200,
     mode: 'lg-fade',
+    getCaptionFromTitleOrAlt: false
   });
 </script>
 
